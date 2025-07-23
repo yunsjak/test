@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>로그인</title>
+	<style>
+		body {
+			font-family: 'Noto Sans KR', sans-serif;
+			background-color: #ffffff;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		
+		.login-container {
+			text-align: center;
+			width: 300px;
+			height: 600px;
+		}
+		
+		.logo {
+			font-size: 28px;
+			font-weight: 700;
+			letter-spacing: 1px;
+		}
+		
+		.slogan {
+			font-size: 12px;
+			color: #555;
+			margin-bottom: 30px;
+		}
+		
+		.login-form {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+		
+		.login-form label {
+			text-align: left;
+			font-size: 13px;
+			color: #333;
+		}
+		
+		.login-form input {
+			padding: 10px;
+			font-size: 14px;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			outline: none;
+			transition: border-color 0.3s;
+		}
+		
+		.login-form input:focus {
+			border-color: #000;
+		}
+		
+		.login-button {
+			margin-top: 20px;
+			padding: 12px 0;
+			background-color: #e0e0e0;
+			color: #ffffff;
+			font-weight: bold;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+		
+		.links {
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+			font-size: 12px;
+		}
+		
+		.links a {
+			color: #666;
+			text-decoration: none;
+		}
+		
+		.links a:hover {
+		 	text-decoration: underline;
+		}
+
+	</style>
+</head>
+<body>
+    <div class="login-container">
+		<h1 class="logo">tradeZone</h1>
+		<p class="slogan">EVERY GREAT DEAL STARTS WITH A TRADE</p>
+	
+		<form class="login-form">
+			<label for="email">이메일 주소</label>
+			<input type="email" id="email" placeholder="tradeZone@example.com" required />
+	
+			<label for="password">비밀번호</label>
+	    	<input type="password" id="password" required />
+	
+	    	<button type="submit" class="login-button">로그인</button>
+
+			<div class="links">
+		  		<a href="#">회원가입</a>
+		  	</div>
+		</form>
+	</div>
+</body>
+</html>

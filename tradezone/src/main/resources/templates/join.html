@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>회원 가입</title>
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			background-color: #fff;
+			margin: 0;
+			padding: 40px;
+			color: #333;
+		}
+		
+		h2 {
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 40px;
+		}
+		
+		.form-container {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		
+		.section-title {
+			font-size: 18px;
+			font-weight: bold;
+			border-bottom: 1.5px solid #000;
+			padding-bottom: 5px;
+			position: relative;
+		}
+		
+		.section-title::after {
+			content: '필수 입력 사항 *';
+			position: absolute;
+			right: 0;
+			font-size: 13px;
+			color: #999;
+			font-weight: normal;
+		}
+		
+		table {
+			width: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+		
+		.form-group {
+			height: 70px;
+			vertical-align: middle;
+		}
+		
+		label {
+			font-size: 12px;
+		}
+		
+		.required::after {
+			content: ' *';
+			color: red;
+			margin-left: 4px;
+		}
+		
+		td {
+			padding: 10px 10px;
+			vertical-align: middle;
+			border-bottom: 1px solid #d1d1d1;
+		}
+		
+		td:first-child {
+			width: 160px;
+			text-align: right;
+			padding-right: 20px;
+			background-color: #efefef; 
+		}
+		
+		input, select {
+			width: 100%;
+			max-width: 300px;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			background-color: #fff; 
+		}
+		
+		.btn-area {
+			text-align: center;
+			margin: 40px;
+		}
+		
+		#btn-cancle {
+			background-color: #fff;
+			color: black;
+			border: 1px solid black;
+		}
+		
+		button {
+			background-color: #000;
+			color: white;
+			padding: 12px 80px;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			margin: 0 10px;
+		}
+	</style>
+</head>
+<body>
+	<h2>회원 가입</h2>
+	
+	<div class="form-container">
+		<div class="section-title">기본 정보</div>
+		<form>
+			<table>
+				<tr class="form-group">
+					<td><label for="email" class="required">이메일(ID)</label></td>
+					<td><input type="email" id="email" name="email" placeholder="example@email.com" required></td>
+				</tr>
+				<tr class="form-group">
+					<td><label for="password" class="required">비밀번호</label></td>
+					<td><input type="password" id="password" name="password" required></td>
+				</tr>
+				<tr class="form-group">
+					<td><label for="confirm-password" class="required">비밀번호 확인</label></td>
+					<td><input type="password" id="confirm-password" name="confirm-password" required></td>
+				</tr>
+				<tr class="form-group">
+					<td><label for="nickname" class="required">닉네임(이름)</label></td>
+					<td><input type="text" id="nickname" name="nickname" required></td>
+				</tr>
+				<tr class="form-group">
+					<td><label for="phone" class="required">전화번호</label></td>
+					<td><input type="tel" id="phone" name="phone" placeholder="01012345678" required></td>
+				</tr>
+				<tr class="form-group">
+					<td><label for="region" class="required">지역</label></td>
+					<td>
+						<select id="region" name="region">
+							<option value="">선택</option>
+							<option value="서울">서울</option>
+							<option value="경기">경기</option>
+							<option value="인천">인천</option>
+							<option value="부산">부산</option>
+							<option value="대구">대구</option>
+							<option value="기타">기타</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			
+			<div class="btn-area">
+				<button id="btn-cancle" type="button">취소하기</button>
+				<button type="submit">가입하기</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
